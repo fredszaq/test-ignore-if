@@ -1,8 +1,12 @@
 [package]
 name = "test-ignore-if"
-version = "0.1.0"
-authors = ["Thibaut Lorrain <thibaut.lorrain@snips.ai>"]
+version = "0.1.0-pre"
+authors = ["Thibaut Lorrain <fredszaq@gmail.com>"]
 edition = "2018"
+license = "Apache-2.0"
+description = "A rust proc macro to conditionnaly ignore tests"
+homepage = "https://github.com/fredszaq/test-ignore-if"
+repository = "https://github.com/fredszaq/test-ignore-if"
 
 [lib]
 proc-macro = true

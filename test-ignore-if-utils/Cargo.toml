@@ -1,7 +1,11 @@
 [package]
 name = "test-ignore-if-utils"
-version = "0.1.0"
-authors = ["Thibaut Lorrain <thibaut.lorrain@snips.ai>"]
+version = "0.1.0-pre"
+authors = ["Thibaut Lorrain <fredszaq@gmail.com>"]
 edition = "2018"
+license = "Apache-2.0"
+description = "Build utils for the `test-ignore-if` crate"
+homepage = "https://github.com/fredszaq/test-ignore-if"
+repository = "https://github.com/fredszaq/test-ignore-if"
 
 [dependencies]
