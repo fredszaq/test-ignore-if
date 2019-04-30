@@ -1,0 +1,11 @@
+[package]
+name = "test-ignore-if-demo"
+version = "0.1.0"
+authors = ["Thibaut Lorrain <thibaut.lorrain@snips.ai>"]
+edition = "2018"
+
+[dependencies]
+test-ignore-if = { path = "../test-ignore-if" }
+
+[build-dependencies]
+test-ignore-if-utils = { path = "../test-ignore-if-utils" }

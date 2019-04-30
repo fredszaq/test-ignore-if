@@ -1,0 +1,7 @@
+[package]
+name = "test-ignore-if-utils"
+version = "0.1.0"
+authors = ["Thibaut Lorrain <thibaut.lorrain@snips.ai>"]
+edition = "2018"
+
+[dependencies]
