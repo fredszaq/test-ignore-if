@@ -1,6 +1,6 @@
 [package]
 name = "test-ignore-if-demo"
-version = "0.1.0"
+version = "0.1.1-pre"
 authors = ["Thibaut Lorrain <fredszaq@gmail.com>"]
 edition = "2018"
 license = "Apache-2.0"
