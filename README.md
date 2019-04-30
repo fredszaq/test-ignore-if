@@ -5,7 +5,6 @@ A rust proc macro to conditionnaly ignore tests
 ## Supported conditions
  - environement variables set at build time
  
- 
 ## Use it
 
 First, you need to add this line to your `build.rs`
@@ -14,7 +13,7 @@ First, you need to add this line to your `build.rs`
 test_ignore_if_utils::enable_ignore_if_env_set_for("CI")
 ```
 This ensures your code is recompiled if the `CI` environment variable 
-changes, and tels the proc macro you've done enabled this
+changes, and tels the proc macro you've enabled this
 
 Then you can annotate your tests
 ```rust

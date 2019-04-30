@@ -19,15 +19,23 @@ pub fn ignore_if(attr: TokenStream, item: TokenStream) -> TokenStream {
 
     let attr = match Attrs::from_list(&attr) {
         Ok(v) => v,
-        Err(e) => { return e.write_errors().into(); }
+        Err(e) => {
+            return e.write_errors().into();
+        }
     };
 
-    if !std::env::var(format!("TEST_IGNORE_IF_ENV_SET_ENABLED_FOR_{}", attr.env_set)).is_ok() {
-        panic!(
-            format!("trying to use ignore_if_env_set for env var \"{}\" that is not enabled, you \
-                    need to add test_ignore_if_utils::enable_ignore_if_env_set_for(\"{}\") in your \
-                    build.rs",
-                    attr.env_set, attr.env_set))
+    if !std::env::var(format!(
+        "TEST_IGNORE_IF_ENV_SET_ENABLED_FOR_{}",
+        attr.env_set
+    ))
+    .is_ok()
+    {
+        panic!(format!(
+            "trying to use ignore_if_env_set for env var \"{}\" that is not enabled, you \
+             need to add test_ignore_if_utils::enable_ignore_if_env_set_for(\"{}\") in your \
+             build.rs",
+            attr.env_set, attr.env_set
+        ))
     }
 
     let item = syn::parse_macro_input!(item);
@@ -39,8 +47,6 @@ pub fn ignore_if(attr: TokenStream, item: TokenStream) -> TokenStream {
         }
     } else {
         item
-    }.into()
+    }
+    .into()
 }
-
-
-
